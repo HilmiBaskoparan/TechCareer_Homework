@@ -1,0 +1,500 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Full Stack Developer</title>
+    <!-- Required Meta Tags -->
+    <!-- Turkish character set-->
+    <meta charset="utf-8">
+
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="./img/logo.jpg" type="image/x-icon">
+
+    <!-- responsive design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- SEO -->
+    <meta name="author" content="Hilmi Başkoparan">
+    <meta name="description" content="html5, css3, js, jquery, bootstrap, java, database">
+    <meta name="keyword" content="html5, css3, js, jquery, bootstrap, java, database">
+    <meta name="title" content="Full Stack Developer" />
+
+    <!-- prevent the web page from being indexed and following-->
+    <meta name=”robots” content="noindex, nofollow">
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <!-- Font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <!-- Google Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&family=Noto+Serif:ital@1&family=Playfair:wght@300&display=swap" rel="stylesheet">
+
+    <!-- JQuery UI -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+
+    <!-- Animate CSS-->
+    <!-- <link rel="stylesheet" href="css/animate.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <!-- wow js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script> new WOW().init() </script>
+    <!-- <script> new WOW(
+            {
+                boxClass: 'wow',      // default
+                animateClass: 'animated', // default
+                offset: 0,          // default
+                mobile: true,       // default
+                live: true        // default
+            }
+        ).init() 
+    </script> -->
+
+    <!-- sweet alert -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <!-- external css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#navbar_second">
+    <!-- Start Codes -->
+    <noscript>Bu browser JS desteklememektedir.</noscript>
+    <span id="no_script"></span>
+
+    <!-- Navbar First Start-->
+    <nav id="navbar_first">
+        <div class="container">
+            <div class="row">
+                <div id="navbar_first_left" class="col-9">
+                    <ul>
+                        <li><a href="https://linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin link-primary"></i></a></li>
+                        <li><a href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-youtube link-danger"></i></li></a>
+                        <li><a href="https://github.com/" target="_blank"><i class="fa-brands fa-github link-light"></i></li></a>
+                        <li><a href="https://www.blogger.com/" target="_blank"><i class="fa-solid fa-blog link-warning"></i></li></a>
+                        <li><a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram link-light"></i></li></a>
+                    </ul>
+                </div>
+                <div id="navbar_first_right" class="col-3">
+                    <button class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#modalId"><i class="fa-solid fa-circle-user link-light"></i></button>
+                    <button class="btn btn-sm btn-primary" data-bs-toggle="offcanvas" data-bs-target="#offCanvasRegisterId"><i class="fa-solid fa-address-card link-light"></i></button>
+                    <button class="btn btn-sm" style="padding: 3px; margin-left: 10px;"><img src="./img/eng.png" class="flag" alt=""></button>
+                    <button class="btn btn-sm" style="padding: 3px;"><img src="./img/tur.png" class="flag" alt=""></button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Modal Body -->
+    <!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
+    <div class="modal fade" id="modalId" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitleId">Giriş</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!-- Important: password, name, user, username bunları değiştirin.-->
+                <div class="modal-body">
+                    <form action="#" method="get" autocomplete="on">
+                        <div class="form_group mb-3">
+                            <label for="email_data">Email</label>
+                            <input type="email" id="email_data" name="email_data" class="form-control" placeholder="Emailinizi giriniz..." required />
+                            <label class="text-danger">Email Yanlış!</label>
+                        </div>
+                        <div class="form_group mb-3">
+                            <label for="passwd">Şifre</label>
+                            <input type="password" id="passwd" name="passwd" class="form-control" placeholder="Şifrenizi giriniz..." required />
+                            <label class="text-danger">Şifre Yanlış!</label>
+                        </div>
+                        <div class="form_group mb-3">
+                            <button type="reset" class="btn btn-danger">Temizle</button>
+                            <button type="submit" class="btn btn-primary">Gönder</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+                    <button type="button" class="btn btn-primary">Giriş</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Register: firstName, middleName, surName, email, passwd, address -->
+    <div class="offcanvas offcanvas-start bg-dark text-white container-fluid" data-bs-backdrop="static" tabindex="-1"
+        id="offCanvasRegisterId" aria-labelledby="offCanvasRegisterIdLabel">
+        <div class="offcanvas-header">
+            <!-- Form Name -->
+            <h3 class="text-center"><b>Registration Form</b></h3><br>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body container">
+
+            <form class="well form-horizontal" action="#" method="get" id="contact_form">
+                <fieldset>
+                    <div class="row mb-3">
+                        <!-- First Name input-->
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class="control-label">İlk İsim</label>  
+                                <div class="inputGroupContainer">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                        <input  name="first_name" placeholder="İsim" class="form-control"  type="text">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Middle Name input-->
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class="control-label">İkinci İsim</label> 
+                                <div class="inputGroupContainer">
+                                    <div class="input-group">
+                                        <input name="middle_name" placeholder="İkinci İsim" class="form-control"  type="text">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Last Name input-->
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class="control-label">Soyisim</label> 
+                                <div class="inputGroupContainer">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                        <input name="last_name" placeholder="Soyisim" class="form-control"  type="text">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Email input-->
+                    <div class="form-group mb-3">
+                        <label class="control-label">E-Mail</label>  
+                        <div class="inputGroupContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                                <input name="email" placeholder="E-Mail Adresiniz" class="form-control"  type="text">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row mb-3">
+                        <!-- Password input-->
+                        <div class="form-group col-md-6 ">
+                            <label class="control-label">Şifre</label> 
+                            <div class="inputGroupContainer">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                    <input name="user_password" placeholder="Şifre" class="form-control"  type="password">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Re-Password input-->                        
+                        <div class="form-group col-md-6 ">
+                            <label class="control-label">Şifre Tekrarı</label> 
+                            <div class="inputGroupContainer">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                    <input name="confirm_password" placeholder="Şifre Tekrarı" class="form-control"  type="password">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Address input-->
+                    <div class="form-group mb-3">
+                        <label class="control-label">Adres</label>  
+                        <div class="inputGroupContainer">
+                            <div class="input-group">
+                                <input name="address" placeholder="Adresinizi giriniz" class="form-control"  type="text">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <!-- City input-->
+                        <div class="form-group col-md-6 ">
+                            <label class="control-label">İl</label>  
+                            <div class="inputGroupContainer">
+                                <div class="input-group">
+                                    <input name="city" placeholder="İl" class="form-control"  type="text">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- District input-->
+                        <div class="form-group col-md-6 ">
+                            <label class="control-label">İlçe</label>  
+                            <div class="inputGroupContainer">
+                                <div class="input-group">
+                                    <input name="district" placeholder="İlçe" class="form-control"  type="text">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Success message -->
+                    <div class="alert alert-success" role="alert" id="success_message">
+                        Success <i class="glyphicon glyphicon-thumbs-up"></i> Success!.
+                    </div>
+                    
+                    <!-- SUBMIT Button -->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label"></label>
+                        <div class="col-md-4"><br>
+                            <button type="submit" class="btn btn-warning">SUBMIT 
+                                <span class="glyphicon glyphicon-send"></span>
+                            </button>
+                        </div>
+                    </div>
+                    
+                </fieldset>
+            </form>
+        </div>
+    </div>
+    <!-- Navbar First End-->
+
+    <!-- Navbar Second Start-->
+    <nav id="navbar_second" class="navbar navbar-expand-md navbar-dark bg-dark">
+          <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="./img/logo.jpg" alt="Logo undefinied." id="logo_id">
+            </a>
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#first" aria-current="page">Anasayfa <span class="visually-hidden">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#studies">Çalışmalar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#performance">Başarılar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#newspaper">Yeni Haberler</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#blog" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Blog</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownId">
+                            <a class="dropdown-item" href="#">Yazılım</a>
+                            <a class="dropdown-item" href="#">Bilim</a>
+                        </div>
+                    </li>
+                </ul>
+                <form class="d-flex my-2 my-lg-0">
+                    <input class="form-control me-sm-2" type="text" placeholder="Bir şeyler yazınız.">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Arama</button>
+                </form>
+            </div>
+      </div>
+    </nav>
+    <!-- Navbar Second End-->
+
+    <!-- header start-->
+    <header id="header_id">
+        <div class="jumbotron">
+            <div class="container">
+                <div class="row">
+                    <div class="p-5 text-center">
+                        <h1 class="text-uppercase display-3 shadow p-4 wow animate__bounceIn" data-wow-delay="0.3s">Full Stack Developer Eğitimine Hoşgeldiniz</h1>
+                        <h4>Frontend & Backend</h4>
+                        <a href="" class="btn btn-success wow animate__bounceIn" data-wow-delay="0.5s">Bizi Takip Edin</a>
+                        <a href="" class="btn btn-outline-primary wow animate__bounceIn" data-wow-delay="0.6s">Linkedin</a>
+                        <a href="" class="btn btn-danger wow animate__bounceIn" data-wow-delay="0.7s">Youtube</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header end-->
+
+    <!-- main start-->
+    <main id="main_id">
+        <!-- Studies Section -->
+        <section id="studies" class="wow animate__bounceIn" data-wow-delay="0.5s">
+            <h1 class="text-center text-uppercase">Çalışmalarımız</h1>
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-md-4 col-xl-4">
+                        <!-- fa-sm fa-lg fa-xl fa-2xl -->
+                        <i class="fa-regular fa-image studies_icon"></i>
+                        <h4 class="text-dark text-uppercase">Frontend</h4>
+                        <p class="line-clamp4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est, tempora.Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, aut.</p>
+                        <a href="#">More</a>
+                    </div>
+                    <div class="col-md-4 col-xl-4">
+                        <i class="fa-solid fa-computer studies_icon"></i>
+                        <h4 class="text-dark text-uppercase">Backend</h4>
+                        <p class="line-clamp4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, sit adipisci?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur, officia magnam.</p>
+                        <a href="#">More</a>
+                    </div>
+                    <div class="col-md-4 col-xl-4">
+                        <i class="fa-solid fa-database studies_icon"></i>
+                        <h4 class="text-dark text-uppercase">Database</h4>
+                        <p class="line-clamp4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad quasi vitae deserunt quaerat nesciunt voluptatibus fuga placeat similique, ea nemo reiciendis laborum, hic accusamus soluta architecto doloremque esse eveniet temporibus.</p>
+                        <a href="#">More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Performance Section-->
+        <section id="counter" class="wow fadeIn" data-wow-delay="0.5s">
+            <div class="container">
+                <div class="counter_header">
+                    <h3>Başarılarımız</h3>
+                    <p>Başarı Oranı</p>
+                </div>
+            </div>
+            <div class="row counters">
+                <div class="col-md-4 col-lg-4 col-xl-4 mx-auto text-center">
+                    <i class="fa-solid fa-check counter_icon"></i>
+                    <span data-toggle="counter-up">+250</span>
+                    <p class="text-center">Çalışma Saati</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti deserunt, consequuntur, velit optio, eum distinctio dignissimos aspernatur totam cupiditate asperiores modi accusantium eaque temporibus? A necessitatibus optio ex quisquam tempore.</p>
+                </div>
+                <div class="col-md-4 col-lg-4 col-xl-4 mx-auto text-center">
+                    <i class="fa-solid fa-check counter_icon"></i>
+                    <span data-toggle="counter-up">+250</span>
+                    <p class="text-center">Çalışma Saati</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto cumque necessitatibus non architecto laudantium ullam aut quia sit inventore nihil.</p>
+                </div>
+                <div class="col-md-4 col-lg-4 col-xl-4 mx-auto text-center">
+                    <i class="fa-solid fa-check counter_icon"></i>
+                    <span data-toggle="counter-up">+250</span>
+                    <p class="text-center">Çalışma Saati</p>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta eaque modi minus ea nostrum alias repellendus incidunt id quisquam! Id qui consequuntur ut vero quia?</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section News -->
+        <section id="newspaper" class="wow fadeIn">
+        </section>
+
+        <!-- Section Blog -->
+        <section id="blog" class="wow fadeIn">
+        </section>
+
+        <section id="first">
+            <h2>Full Stack Developer</h2>
+            <p>Full Stack Development, Front End ve Back End de dahil olmak üzere uçtan uca tüm yazılım geliştirme
+                süreçlerini kapsar.
+                Front End, kullanıcı arayüzleri ile ilgilenirken; Back End, uygulamaların iş akış süreçleri ile
+                ilgilenir.
+                Full Stack ise Front End, Back End ve veri tabanı süreçleriyle ilgilenir. </p>
+
+            <p>Full Stack Developer, hem kullanıcı arayüzünü geliştiren hem de Back End kısmında iş akışlarını kontrol
+                eden kişidir.
+                Full Stack Developer birden fazla programlama dilinde kendisini geliştirdiği için bir teknolojiden
+                diğerine kolayca geçerek geliştirme yapabilir.
+                Bitmek bilmeyen bir merak duygusu, bir şeyin nasıl çalıştığını bilmek ve onun arkasındaki işlevleri
+                incelemek Full Stack Developer’ın özelliklerini tanımlayacak en önemli açıklamalardan biridir. </p>
+
+            <p>
+                <span style="font-style: italic;">Kaynakça için <a href="https://coderspace.io/sozluk/full-stack" target="_blank">tıklayınız.</a></span> 
+            </p>
+            
+
+            <h2>Full Stack Developer Nedir ve Ne Yapar?</h2>
+            <p>Full Stack Developer, uçtan uca bir uygulamayı hızlı ve verimli bir şekilde oluşturmak için kullanılan
+                tüm teknolojiler hakkında bilgi sahibi ve sorumlu olan kişidir.
+                Full Stack Developer çeşitli sorumluluklar üstlenir. Full Stack Developer’ın sorumluluklarından bazıları
+                şunlardır:</p>
+
+            <ul>
+                <li>Projeyi veya uygulamayı geliştirmek için doğru teknolojilerin seçilmesine karar verir.</li>
+                <li>HTML, JavaScript ve CSS gibi programlama dillerini bilir ve bu teknolojileri kullanarak geliştirme yapar.</li>
+                <li>Veri tabanlarını ve sunucuları yönetir.</li>
+                <li>Projeyi uçtan uca takip eder ve gerekli düzenlemeleri yapar.</li>
+                <li>Front End ve Back End kısmının test edilmesine yardımcı olur.</li>
+                <li>Diğer geliştiriciler ve tasarımcılar ile iletişim kurar.</li>
+                <li>Proje boyunca Clean Kod (temiz kod) yazar.</li>
+                <li>Teknoloji haberlerini sürekli olarak takip eder. Gelecek teknoloji güncellemelerine nasıl uyum sağlayacaklarını düşünür.  </li>
+            </ul>
+
+            <i class="fa-solid fa-user"></i>
+            <img src="./img/computer-1.png" alt="Picture is not here!">
+        </section>
+    </main>
+    <!-- main end-->
+
+    <!-- footer start-->
+    <footer id="footer_id">
+        <section id="footer_contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <h3 class="text-uppercase" style="margin-left: 2.5rem;">Contact</h3>
+                        <!-- fa-sm fa-lg fa-xl fa-2xl -->
+                        <div class="d-grid gap-2">
+                            <p> <i class="fas fa-home me-3 text-secondary"></i> Ankara / TÜRKİYE</p>
+                            <p> <i class="fas fa-envelope me-3 text-secondary"></i>h.baskoparan@gmail.com</p>
+                            <p> <i class="fas fa-phone me-3 text-secondary"></i> + 01 234 567 88</p>
+                            <p> <i class="fas fa-print me-3 text-secondary"></i> + 01 234 567 89</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <h3 class="text-uppercase" style="margin-left:2.5rem">About Company</h3>
+                        <p class="line-clamp8">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam in doloremque sunt eveniet odio, aperiam distinctio esse consequuntur voluptas facilis nostrum veritatis quasi animi illo quis eius aliquam! Sed, magnam?
+                        Ratione voluptates animi temporibus ab, reprehenderit repellendus nemo tempore laborum fuga nihil reiciendis totam veniam dolorem ut quisquam asperiores autem similique modi optio nisi quam deserunt numquam? Eaque, recusandae mollitia.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <h3 class="text-uppercase">Email</h3>
+                        <form action="#" id="form_email">
+                            <input type="text" class="form-control mb-2" placeholder="Konuyu giriniz...">
+                            <input type="text" class="form-control mb-2" placeholder="Mail adresinizi giriniz...">
+                            <textarea class="form-control" rows="3" placeholder="Email Konusu ..."></textarea>
+                            <button type="reset" class="btn btn-danger mt-3">Temizle</button>
+                            <button type="submit" class="btn btn-primary mt-3">Email Gönder</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <section id="copy" class="text-center bg-dark text-white" id="footer_copy_right">
+        <div class="container_fluid">
+            2022 - 2023 &copy; Bütün hakları saklıdır. <a href="#">Designed and coded by Hilmi Başkoparan</a>
+        </div>
+    </section>
+    <!-- footer end-->
+
+    <a id="back_top" href="#no_script" class="btn btn-primary"><i class="fa-solid fa-arrow-up"></i></a>
+
+    <!-- End Codes -->
+    <!-- Counter JS -->
+    <!-- Waypoints JavaScript Libraries -->
+    <script src="./experiences/waypoints/waypoints.min.js"></script>
+    <!-- Counterup JavaScript Libraries -->
+    <script src="./experiences/counterup/counterup.min.js"></script>
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+        </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+        </script>
+
+    <!-- external js -->
+    <script src="./template.js"></script>
+</body>
+
+</html>

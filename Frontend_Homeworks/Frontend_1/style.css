@@ -1,0 +1,256 @@
+/*
+Project Name: Full Stack Developer Blog Page
+-Name: Blog Page
+-Author: Hilmi Başkoparan
+-Version: v.1
+-Description: This project is a blog page about full stack developer.
+*/
+
+
+/*===========================================================================
+*    ROOT
+===========================================================================*/
+:root {
+    --template-bg: rgb(255, 255, 255);
+}
+
+/*===========================================================================
+*    GENERAL PROPERTY
+===========================================================================*/
+
+* {
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 15px;
+}
+
+body {
+    font-family: "Fira Sans", sans-serif;
+    position: relative;
+    line-height: 1.5;
+    font-size: 1rem;
+    background-color: var(--template-bg);
+    overflow-x: hidden;
+}
+
+main {
+    margin: 3rem 3rem;
+    text-align: justify;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    margin: 0 3rem;
+    text-align: justify;
+    /*font-size: 1.5rem !important;*/
+    opacity: 0.9;
+    font-weight: 400;
+}
+
+p {
+    text-align: justify;
+}
+
+i {
+    font-size: 1.5rem;
+    /*color:rgba(13, 149, 228, 0.6);*/
+}
+
+img {
+    max-width: 50%;
+    height: auto;
+    border-radius: 50%;
+
+}
+
+img:hover {
+    cursor: pointer;
+    border: 0.1rem solid rgba(13, 149, 228, 0.6);
+    opacity: 0.9;
+    transition: 1s all;
+}
+
+.my_clearfix::after {
+    content:"";
+    display: block;
+    clear:both;
+}
+
+/*===========================================================================
+*    LINE CLAMP
+===========================================================================*/
+.line-clamp4 {
+    display: -webkit-box;   /* Diğer browserlarda da çalışması için */
+    overflow: hidden;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+}
+
+.line-clamp6 {
+    display: -webkit-box;   /* Diğer browserlarda da çalışması için */
+    overflow: hidden;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+}
+
+.line-clamp8 {
+    display: -webkit-box;   /* Diğer browserlarda da çalışması için */
+    overflow: hidden;
+    -webkit-line-clamp: 8;
+    -webkit-box-orient: vertical;
+}
+
+.line-clamp10 {
+    display: -webkit-box;   /* Diğer browserlarda da çalışması için */
+    overflow: hidden;
+    -webkit-line-clamp: 10;
+    -webkit-box-orient: vertical;
+}
+
+/*===========================================================================
+*    NAVBAR FIRST
+===========================================================================*/
+#navbar_first{
+    background-color: black;
+    color: white;
+    max-height: 3rem;
+    opacity: 0.9;
+}
+
+#navbar_first ul li {
+    list-style-type: none;
+    display: inline-block;
+    margin-top: 0.75rem;
+    margin-right: 0.4rem;
+}
+
+#navbar_first_right {
+    margin-top: 0.3rem;
+    margin-bottom: 0.3rem;
+}
+
+.flag{
+    width: 2.5rem;
+    border-radius: 10%;
+    max-width: 100%;
+}
+
+#logo_id {
+    border-radius: 50% 50%;
+    width: 5.5rem;
+ }
+
+#navbar_second {
+    position:sticky;
+    top: 0;
+    z-index: 1;
+}
+
+#offCanvasRegisterId {
+    width: 35%;
+}
+
+#success_message{
+    display: none;
+}
+
+/*===========================================================================
+*    HEADER
+===========================================================================*/
+header {
+    background-image: url(./img/computer_engineer.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    /* height: 32rem; */
+    height: 80vh; /* vh: resmin görünür şekilde ayarlanması için */
+    padding-top: 5rem;
+    z-index: -1;
+}
+
+header h1,h4 {
+    color: white;
+    text-transform: uppercase;
+}
+
+/*===========================================================================
+*    MAIN
+===========================================================================*/
+#studies {
+    margin: 5rem 0rem;
+}
+
+.studies_icon {
+    font-size: 5rem;
+    margin-bottom: 1.5rem;
+    /* https://www.cssmatic.com/ */
+    box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.6);
+}
+
+.studies_icon:hover{
+    cursor: pointer;
+    opacity: 0.9;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.4);
+}
+
+/* COUNTERS */
+#counter {
+    background-color: #0B5ED7;
+    color: white;
+    padding: 4rem 4rem;
+}
+
+.counter_header h3{
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.counter_header p{
+    text-align: center;
+    text-transform: capitalize;
+}
+
+
+.counter_icon {
+    font-size: 5rem;
+    display: block;
+    margin-bottom: 1.5rem;
+}
+
+/*===========================================================================
+*    FOOTER
+===========================================================================*/
+#footer_contact  {
+    height: 15rem;
+    width: auto;
+    background-color: black;
+    color: white;
+}
+
+#copy {
+    height: 5rem;
+    padding: 2rem;
+}
+
+#back_top {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    margin: 0.2rem 0.2rem;
+    /*background-color: #0B5ED7;*/
+    /*color: white;*/
+}
+/*
+#back_top:hover {
+    cursor: pointer;
+    background-color: white;
+    color: #0B5ED7;
+    transition: all 1s;
+}
+*/
